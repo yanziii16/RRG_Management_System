@@ -1,0 +1,646 @@
+{
+  "users": [
+    {
+      "id": "usr-admin-1",
+      "name": "Elena Reyes",
+      "email": "admin@luckystarresort.com",
+      "phone": "+63 917 555 0101",
+      "role": "ADMIN",
+      "status": "Active",
+      "password": "password123",
+      "address": "Luckystar Management Office",
+      "createdAt": "2026-01-10T08:00:00.000Z"
+    },
+    {
+      "id": "usr-guest-1",
+      "name": "Ashly Jana Quising",
+      "email": "ashly.quising@gmail.com",
+      "phone": "+63 918 321 4456",
+      "role": "GUEST",
+      "status": "Active",
+      "password": "password123",
+      "address": "Quezon City, Metro Manila",
+      "createdAt": "2026-02-14T10:30:00.000Z"
+    },
+    {
+      "id": "usr-guest-3",
+      "name": "Camille Santos",
+      "email": "camille.santos@yahoo.com",
+      "phone": "+63 920 441 7812",
+      "role": "GUEST",
+      "status": "Active",
+      "password": "password123",
+      "address": "Santa Rosa, Laguna",
+      "createdAt": "2026-03-19T09:05:00.000Z"
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "acc-room-1",
+      "name": "Family Suite Room",
+      "category": "Room",
+      "bookingMode": "overnight",
+      "description": "A spacious air-conditioned suite designed for families and barkada stays, featuring direct pool-wing access, crisp hotel linens, and a private shaded balcony.",
+      "capacity": 10,
+      "beds": "2 king beds · 1 sofa bed",
+      "ratePerNight": 750,
+      "dayUseRates": {
+        "Morning": 750,
+        "Afternoon": 750,
+        "Night": 750
+      },
+      "amenities": [
+        "Air conditioning",
+        "WiFi included",
+        "Private bathroom",
+        "Hot & cold shower",
+        "Pool access for all guests",
+        "Fresh bath towels"
+      ],
+      "images": [
+        "/src/assets/images/room_family_suite_1794982136996.jpg",
+        "/src/assets/images/resort_hero_pool_1794982137442.jpg"
+      ],
+      "isAvailable": true,
+      "status": "Available",
+      "createdAt": "2026-01-12T08:00:00.000Z"
+    },
+    {
+      "id": "acc-room-2",
+      "name": "Poolside Couple Suite",
+      "category": "Room",
+      "bookingMode": "overnight",
+      "description": "An intimate, bright retreat overlooking the central swimming pool with a queen bed, quiet workspace, and serene garden ambiance.",
+      "capacity": 3,
+      "beds": "1 queen bed",
+      "ratePerNight": 550,
+      "dayUseRates": {
+        "Morning": 550,
+        "Afternoon": 550,
+        "Night": 550
+      },
+      "amenities": [
+        "Air conditioning",
+        "WiFi included",
+        "Private bathroom",
+        "Complimentary coffee setup",
+        "Pool access"
+      ],
+      "images": [
+        "/src/assets/images/room_family_suite_1794982136996.jpg",
+        "/src/assets/images/resort_golden_hour_1794982139412.jpg"
+      ],
+      "isAvailable": true,
+      "status": "Available",
+      "createdAt": "2026-01-14T08:00:00.000Z"
+    },
+    {
+      "id": "acc-cottage-1",
+      "name": "Regular Cottage",
+      "category": "Cottage",
+      "bookingMode": "both",
+      "description": "An open-air shaded poolside cottage ideal for family gatherings, birthday lunches, and unhurried afternoon swims right beside the main pool.",
+      "capacity": 8,
+      "beds": "Open-air pavilion table",
+      "ratePerNight": 650,
+      "dayUseRates": {
+        "Morning": 450,
+        "Afternoon": 500,
+        "Night": 550
+      },
+      "amenities": [
+        "Shaded wooden pavilion",
+        "Dining table & seating for 8",
+        "Power outlet access",
+        "Direct pool proximity",
+        "Grilling station access"
+      ],
+      "images": [
+        "/src/assets/images/cottage_regular_1794982137966.jpg",
+        "/src/assets/images/resort_hero_pool_1794982137442.jpg",
+        "/uploads/cottages/photo_6334631820628006383_y_1795072885436_c91d0e.jpg"
+      ],
+      "isAvailable": true,
+      "status": "Available",
+      "createdAt": "2026-01-15T08:00:00.000Z"
+    },
+    {
+      "id": "acc-cottage-2",
+      "name": "Grand Pavilion Cottage",
+      "category": "Cottage",
+      "bookingMode": "both",
+      "description": "Our largest waterfront cabana crafted for group reunions and celebrations with cushioned seating, ceiling fan cooling, and unobstructed pool views.",
+      "capacity": 15,
+      "beds": "Extended pavilion seating",
+      "ratePerNight": 1100,
+      "dayUseRates": {
+        "Morning": 750,
+        "Afternoon": 850,
+        "Night": 900
+      },
+      "amenities": [
+        "Ceiling fan & lighting",
+        "Seating for up to 15 guests",
+        "Dedicated sink & prep counter",
+        "Power outlets",
+        "Poolside priority location"
+      ],
+      "images": [
+        "/src/assets/images/resort_golden_hour_1794982139412.jpg",
+        "/src/assets/images/cottage_regular_1794982137966.jpg"
+      ],
+      "isAvailable": true,
+      "status": "Available",
+      "createdAt": "2026-01-16T08:00:00.000Z"
+    },
+    {
+      "id": "acc-umbrella-1",
+      "name": "Premium Beach Umbrella",
+      "category": "Umbrella",
+      "bookingMode": "day_use",
+      "description": "A sleek poolside sun lounge spot with dual cream canvas umbrellas, cushioned wooden loungers, and quick access to shallow pool steps.",
+      "capacity": 4,
+      "beds": "2 cushioned loungers",
+      "ratePerNight": 400,
+      "dayUseRates": {
+        "Morning": 350,
+        "Afternoon": 400,
+        "Night": 400
+      },
+      "amenities": [
+        "Dual sun loungers",
+        "Wide UV-shaded umbrella",
+        "Side drinks table",
+        "Poolside towel rack"
+      ],
+      "images": [
+        "/src/assets/images/umbrella_poolside_1794982138079.jpg",
+        "/src/assets/images/resort_hero_pool_1794982137442.jpg"
+      ],
+      "isAvailable": true,
+      "status": "Available",
+      "createdAt": "2026-01-18T08:00:00.000Z"
+    }
+  ],
+  "facilities": [
+    {
+      "id": "fac-2",
+      "name": "Private Karaoke Lounge",
+      "category": "Entertainment",
+      "description": "Air-conditioned acoustic lounge outfitted with a widescreen karaoke system, dual wireless microphones, and plush sofa seating.",
+      "operatingHours": "10:00 AM - 10:00 PM",
+      "capacity": 14,
+      "rateNote": "₱350 / hour for resort guests",
+      "images": [
+        "/src/assets/images/facility_karaoke_lounge_1794982139760.jpg"
+      ],
+      "isAvailable": true
+    },
+    {
+      "id": "fac-3",
+      "name": "Poolside Sunset Deck",
+      "category": "Relaxation",
+      "description": "Evening-lit stone deck and garden walkways overlooking the water, ideal for quiet twilight dining and photos.",
+      "operatingHours": "6:00 AM - 11:00 PM",
+      "capacity": 40,
+      "rateNote": "Open to all checked-in and day-use guests",
+      "images": [
+        "/src/assets/images/resort_golden_hour_1794982139412.jpg"
+      ],
+      "isAvailable": true
+    },
+    {
+      "id": "fac-4",
+      "name": "Grill & Picnic Lawn",
+      "category": "Dining",
+      "description": "Dedicated outdoor charcoal grilling stations nestled beside the cottages so groups can prepare fresh meals together.",
+      "operatingHours": "7:00 AM - 9:00 PM",
+      "capacity": 25,
+      "rateNote": "Complimentary with cottage reservations",
+      "images": [
+        "/src/assets/images/cottage_regular_1794982137966.jpg"
+      ],
+      "isAvailable": true
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "title": "Main Turquoise Pool & Villa Wing",
+      "category": "Pool & Grounds",
+      "caption": "Morning sunlight across the central swimming pool and two-story suite wing.",
+      "imageUrl": "/src/assets/images/resort_hero_pool_1794982137442.jpg",
+      "createdAt": "2026-01-12T08:00:00.000Z"
+    },
+    {
+      "id": "gal-2",
+      "title": "Family Suite Interior",
+      "category": "Rooms",
+      "caption": "Crisp cotton linens, warm wood finishes, and private balcony view.",
+      "imageUrl": "/src/assets/images/room_family_suite_1794982136996.jpg",
+      "createdAt": "2026-01-12T08:00:00.000Z"
+    },
+    {
+      "id": "gal-3",
+      "title": "Open-Air Poolside Cottage",
+      "category": "Cottages",
+      "caption": "Breezy timber pavilion seating right beside the pool edge.",
+      "imageUrl": "/src/assets/images/cottage_regular_1794982137966.jpg",
+      "createdAt": "2026-01-12T08:00:00.000Z"
+    },
+    {
+      "id": "gal-4",
+      "title": "Poolside Umbrella Loungers",
+      "category": "Cottages",
+      "caption": "Cushioned sunbeds shaded by wide canvas umbrellas.",
+      "imageUrl": "/src/assets/images/umbrella_poolside_1794982138079.jpg",
+      "createdAt": "2026-01-12T08:00:00.000Z"
+    },
+    {
+      "id": "gal-5",
+      "title": "Acoustic Karaoke Lounge",
+      "category": "Facilities",
+      "caption": "Private lounge for group sing-alongs and evening celebrations.",
+      "imageUrl": "/src/assets/images/facility_karaoke_lounge_1794982139760.jpg",
+      "createdAt": "2026-01-12T08:00:00.000Z"
+    },
+    {
+      "id": "gal-6",
+      "title": "Golden Hour at Luckystar",
+      "category": "Pool & Grounds",
+      "caption": "Warm pathway lanterns reflecting on the tranquil evening pool.",
+      "imageUrl": "/src/assets/images/resort_golden_hour_1794982139412.jpg",
+      "createdAt": "2026-01-12T08:00:00.000Z"
+    }
+  ],
+  "rentals": [
+    {
+      "id": "ren-1",
+      "name": "Pool Floater (Giant Ring)",
+      "category": "Pool Gear",
+      "description": "Inflatable swim ring suitable for adults and teens.",
+      "price": 80,
+      "stockQuantity": 15,
+      "availableQuantity": 12,
+      "unitLabel": "per day",
+      "isAvailable": true
+    },
+    {
+      "id": "ren-2",
+      "name": "Extra Bath Towel",
+      "category": "Linen & Towels",
+      "description": "Freshly laundered oversized cotton resort towel.",
+      "price": 50,
+      "stockQuantity": 40,
+      "availableQuantity": 34,
+      "unitLabel": "per stay",
+      "isAvailable": true
+    },
+    {
+      "id": "ren-3",
+      "name": "Extra Pillow & Blanket Set",
+      "category": "Linen & Towels",
+      "description": "Additional plush pillow and soft microfiber blanket.",
+      "price": 120,
+      "stockQuantity": 20,
+      "availableQuantity": 18,
+      "unitLabel": "per night",
+      "isAvailable": true
+    },
+    {
+      "id": "ren-4",
+      "name": "Life Vest (Kids / Adult)",
+      "category": "Pool Gear",
+      "description": "Safety buoyancy vest for swimming pool use.",
+      "price": 60,
+      "stockQuantity": 24,
+      "availableQuantity": 20,
+      "unitLabel": "per day",
+      "isAvailable": true
+    },
+    {
+      "id": "ren-5",
+      "name": "Portable Charcoal Grill Set",
+      "category": "Equipment",
+      "description": "Heavy-duty grill rack with starter tongs and tray.",
+      "price": 150,
+      "stockQuantity": 8,
+      "availableQuantity": 7,
+      "unitLabel": "per session",
+      "isAvailable": true
+    }
+  ],
+  "reservations": [
+    {
+      "id": "res-1048",
+      "referenceNumber": "RSV-1048",
+      "guestId": "usr-guest-1",
+      "guestName": "Ashly Jana Quiming",
+      "guestEmail": "ashly.quiming@gmail.com",
+      "guestPhone": "+63 918 321 4456",
+      "accommodationId": "acc-room-1",
+      "accommodationName": "Family Suite Room",
+      "accommodationCategory": "Room",
+      "stayType": "overnight",
+      "checkInDate": "2026-11-20",
+      "checkOutDate": "2026-11-21",
+      "nights": 1,
+      "guestCount": 4,
+      "baseAmount": 750,
+      "rentals": [
+        {
+          "rentalId": "ren-2",
+          "name": "Extra Bath Towel",
+          "quantity": 2,
+          "unitPrice": 50,
+          "subtotal": 100
+        }
+      ],
+      "rentalsAmount": 100,
+      "serviceFee": 42.5,
+      "totalAmount": 892.5,
+      "amountPaid": 892.5,
+      "balance": 0,
+      "specialRequests": "Would appreciate a quiet room near the pool wing.",
+      "status": "Cancelled",
+      "paymentStatus": "Paid",
+      "createdAt": "2026-11-18T11:20:00.000Z",
+      "updatedAt": "2026-11-19T05:48:21.514Z"
+    },
+    {
+      "id": "res-1049",
+      "referenceNumber": "RSV-1049",
+      "guestId": "usr-guest-1",
+      "guestName": "Ashly Jana Quiming",
+      "guestEmail": "ashly.quiming@gmail.com",
+      "guestPhone": "+63 918 321 4456",
+      "accommodationId": "acc-cottage-1",
+      "accommodationName": "Regular Cottage",
+      "accommodationCategory": "Cottage",
+      "stayType": "day_use",
+      "checkInDate": "2026-11-22",
+      "checkOutDate": "2026-11-22",
+      "session": "Afternoon",
+      "nights": 0,
+      "guestCount": 6,
+      "baseAmount": 500,
+      "rentals": [
+        {
+          "rentalId": "ren-1",
+          "name": "Pool Floater (Giant Ring)",
+          "quantity": 2,
+          "unitPrice": 80,
+          "subtotal": 160
+        }
+      ],
+      "rentalsAmount": 160,
+      "serviceFee": 33,
+      "totalAmount": 693,
+      "amountPaid": 0,
+      "balance": 693,
+      "specialRequests": "Family lunch gathering at 1 PM.",
+      "status": "Confirmed",
+      "paymentStatus": "Pending Verification",
+      "createdAt": "2026-11-19T08:40:00.000Z",
+      "updatedAt": "2026-11-19T05:47:47.258Z"
+    },
+    {
+      "id": "res-1050",
+      "referenceNumber": "RSV-1050",
+      "guestId": "usr-guest-2",
+      "guestName": "Marco Villanueva",
+      "guestEmail": "marco.v@gmail.com",
+      "guestPhone": "+63 919 778 9021",
+      "accommodationId": "acc-room-2",
+      "accommodationName": "Poolside Couple Suite",
+      "accommodationCategory": "Room",
+      "stayType": "overnight",
+      "checkInDate": "2026-11-19",
+      "checkOutDate": "2026-11-20",
+      "nights": 1,
+      "guestCount": 2,
+      "baseAmount": 550,
+      "rentals": [],
+      "rentalsAmount": 0,
+      "serviceFee": 27.5,
+      "totalAmount": 577.5,
+      "amountPaid": 300,
+      "balance": 277.5,
+      "status": "Checked-In",
+      "paymentStatus": "Partially Paid",
+      "createdAt": "2026-11-17T16:10:00.000Z",
+      "updatedAt": "2026-11-19T14:05:00.000Z"
+    },
+    {
+      "id": "res-1051",
+      "referenceNumber": "RSV-1051",
+      "guestId": "usr-guest-3",
+      "guestName": "Camille Santos",
+      "guestEmail": "camille.santos@yahoo.com",
+      "guestPhone": "+63 920 441 7812",
+      "accommodationId": "acc-umbrella-1",
+      "accommodationName": "Premium Beach Umbrella",
+      "accommodationCategory": "Umbrella",
+      "stayType": "day_use",
+      "checkInDate": "2026-11-19",
+      "checkOutDate": "2026-11-19",
+      "session": "Morning",
+      "nights": 0,
+      "guestCount": 3,
+      "baseAmount": 350,
+      "rentals": [],
+      "rentalsAmount": 0,
+      "serviceFee": 17.5,
+      "totalAmount": 367.5,
+      "amountPaid": 367.5,
+      "balance": 0,
+      "status": "Confirmed",
+      "paymentStatus": "Paid",
+      "createdAt": "2026-11-18T17:00:00.000Z",
+      "updatedAt": "2026-11-18T18:10:00.000Z"
+    },
+    {
+      "id": "res-1052",
+      "referenceNumber": "RSV-1052",
+      "guestId": "usr-guest-2",
+      "guestName": "Marco Villanueva",
+      "guestEmail": "marco.v@gmail.com",
+      "guestPhone": "+63 919 778 9021",
+      "accommodationId": "acc-cottage-2",
+      "accommodationName": "Grand Pavilion Cottage",
+      "accommodationCategory": "Cottage",
+      "stayType": "overnight",
+      "checkInDate": "2026-11-24",
+      "checkOutDate": "2026-11-25",
+      "nights": 1,
+      "guestCount": 12,
+      "baseAmount": 1100,
+      "rentals": [
+        {
+          "rentalId": "ren-5",
+          "name": "Portable Charcoal Grill Set",
+          "quantity": 1,
+          "unitPrice": 150,
+          "subtotal": 150
+        }
+      ],
+      "rentalsAmount": 150,
+      "serviceFee": 62.5,
+      "totalAmount": 1312.5,
+      "amountPaid": 0,
+      "balance": 1312.5,
+      "status": "Pending",
+      "paymentStatus": "Unpaid",
+      "createdAt": "2026-11-19T10:15:00.000Z",
+      "updatedAt": "2026-11-19T10:15:00.000Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay-1",
+      "receiptNumber": "RCT-2026-101",
+      "reservationId": "res-1048",
+      "reservationRef": "RSV-1048",
+      "guestId": "usr-guest-1",
+      "guestName": "Ashly Jana Quiming",
+      "amount": 892.5,
+      "paymentType": "Full Payment",
+      "method": "GCash",
+      "referenceCode": "GC-88412904",
+      "proofImageUrl": "/src/assets/images/resort_hero_pool_1794982137442.jpg",
+      "notes": "Full online payment verified by front office admin.",
+      "status": "Approved",
+      "recordedByRole": "GUEST",
+      "verifiedBy": "Elena Reyes",
+      "createdAt": "2026-11-18T11:30:00.000Z",
+      "verifiedAt": "2026-11-18T14:00:00.000Z"
+    },
+    {
+      "id": "pay-2",
+      "receiptNumber": "RCT-2026-102",
+      "reservationId": "res-1049",
+      "reservationRef": "RSV-1049",
+      "guestId": "usr-guest-1",
+      "guestName": "Ashly Jana Quiming",
+      "amount": 350,
+      "paymentType": "Down Payment",
+      "method": "GCash",
+      "referenceCode": "GC-99201432",
+      "proofImageUrl": "/src/assets/images/cottage_regular_1794982137966.jpg",
+      "notes": "50% down payment slip submitted by guest.",
+      "status": "Pending Verification",
+      "recordedByRole": "GUEST",
+      "createdAt": "2026-11-19T09:15:00.000Z"
+    },
+    {
+      "id": "pay-3",
+      "receiptNumber": "RCT-2026-103",
+      "reservationId": "res-1050",
+      "reservationRef": "RSV-1050",
+      "guestId": "usr-guest-2",
+      "guestName": "Marco Villanueva",
+      "amount": 300,
+      "paymentType": "Down Payment",
+      "method": "Cash",
+      "notes": "Walk-in check-in down payment recorded by admin.",
+      "status": "Approved",
+      "recordedByRole": "ADMIN",
+      "verifiedBy": "Elena Reyes",
+      "createdAt": "2026-11-19T14:05:00.000Z",
+      "verifiedAt": "2026-11-19T14:05:00.000Z"
+    },
+    {
+      "id": "pay-4",
+      "receiptNumber": "RCT-2026-104",
+      "reservationId": "res-1051",
+      "reservationRef": "RSV-1051",
+      "guestId": "usr-guest-3",
+      "guestName": "Camille Santos",
+      "amount": 367.5,
+      "paymentType": "Full Payment",
+      "method": "Bank Transfer",
+      "referenceCode": "BDO-5519201",
+      "status": "Approved",
+      "recordedByRole": "ADMIN",
+      "verifiedBy": "Elena Reyes",
+      "createdAt": "2026-11-18T18:10:00.000Z",
+      "verifiedAt": "2026-11-18T18:10:00.000Z"
+    }
+  ],
+  "guestCounts": [
+    {
+      "id": "gc-1",
+      "date": "2026-11-19",
+      "session": "Morning",
+      "kids": 6,
+      "adults": 14,
+      "seniorPwd": 2,
+      "total": 22,
+      "notes": "Morning walk-in families and swimmers",
+      "recordedBy": "Elena Reyes",
+      "createdAt": "2026-11-19T11:30:00.000Z"
+    },
+    {
+      "id": "gc-2",
+      "date": "2026-11-19",
+      "session": "Afternoon",
+      "kids": 9,
+      "adults": 18,
+      "seniorPwd": 4,
+      "total": 31,
+      "notes": "Afternoon birthday group",
+      "recordedBy": "Elena Reyes",
+      "createdAt": "2026-11-19T15:10:00.000Z"
+    },
+    {
+      "id": "gc-3",
+      "date": "2026-11-18",
+      "session": "Morning",
+      "kids": 4,
+      "adults": 10,
+      "seniorPwd": 1,
+      "total": 15,
+      "recordedBy": "Elena Reyes",
+      "createdAt": "2026-11-18T11:00:00.000Z"
+    },
+    {
+      "id": "gc-4",
+      "date": "2026-11-18",
+      "session": "Night",
+      "kids": 3,
+      "adults": 12,
+      "seniorPwd": 2,
+      "total": 17,
+      "recordedBy": "Elena Reyes",
+      "createdAt": "2026-11-18T19:45:00.000Z"
+    }
+  ],
+  "settings": {
+    "resortName": "Luckystar Resort",
+    "tagline": "A place to pause. A stay to remember.",
+    "description": "Luckystar Resort is a welcoming tropical getaway featuring crystal-clear swimming pools, spacious family suites, breezy poolside cottages, and relaxed coastal hospitality designed for unhurried moments together.",
+    "mission": "To provide every family, group, and traveler with a clean, restorative, and memorable resort stay through attentive service and honest comfort.",
+    "phone": "+63 912 345 6789",
+    "email": "reservations@luckystarresort.com",
+    "address": "Brgy. Mabuhay Coastal Road, Batangas 4200, Philippines",
+    "checkInTime": "2:00 PM",
+    "checkOutTime": "12:00 NN",
+    "dayUseHours": {
+      "Morning": "8:00 AM - 12:00 PM",
+      "Afternoon": "1:00 PM - 5:00 PM",
+      "Night": "6:00 PM - 10:00 PM"
+    },
+    "downPaymentPercentage": 50,
+    "serviceFeeRate": 0.05,
+    "cancellationPolicy": "Free cancellation up to 48 hours before check-in. Cancellations within 48 hours of arrival may incur a 1-night or 50% session fee.",
+    "bankDetails": {
+      "gcashNumber": "0917 884 2210",
+      "gcashName": "Luckystar Resort Corp.",
+      "bankName": "BDO Unibank",
+      "bankAccountNumber": "0042-8819-4510",
+      "bankAccountName": "Luckystar Resort & Cottages Inc."
+    },
+    "logoUrl": "",
+    "heroImageUrl": "/src/assets/images/resort_hero_pool_1794982137442.jpg"
+  }
+}
