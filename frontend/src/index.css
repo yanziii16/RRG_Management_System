@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --resort-pine: #143e3b;
+  --resort-pine-hover: #0e2e2b;
+  --resort-teal: #17524c;
+  --resort-canvas: #f5f8f7;
+  --resort-surface: #ffffff;
+  --resort-border: #dce5e3;
+  --resort-ink: #152423;
+  --resort-muted: #5a6d6b;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--resort-canvas);
+  color: var(--resort-ink);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .print-container {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
