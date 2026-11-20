@@ -20,4 +20,5 @@ module.exports = {
   adminSeedPassword: process.env.ADMIN_SEED_PASSWORD,
   timezone: 'Asia/Manila',
     clientUrl: process.env.CLIENT_URL || process.env.CORS_ORIGIN || 'http://localhost:5173',
+    
 };
