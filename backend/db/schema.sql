@@ -134,3 +134,6 @@ ALTER TABLE guest_counts ADD COLUMN IF NOT EXISTS category VARCHAR(12) CHECK (ca
 DROP INDEX IF EXISTS uq_rates_kind_name;
 CREATE UNIQUE INDEX IF NOT EXISTS uq_rates_kind_name_slot
   ON rates (kind, name, COALESCE(session, ''), COALESCE(category, ''));
+
+ALTER TABLE users DROP CONSTRAINT IF EXISTS users_role_check;
+ALTER TABLE users ADD CONSTRAINT users_role_check CHECK (role IN ('admin', 'cashier', 'guest'));
