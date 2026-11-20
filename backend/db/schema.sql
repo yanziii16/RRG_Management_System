@@ -123,6 +123,9 @@ CREATE TABLE IF NOT EXISTS payments (
 CREATE INDEX IF NOT EXISTS idx_payments_reservation ON payments (reservation_id);
 CREATE INDEX IF NOT EXISTS idx_payments_paid_at ON payments (paid_at);
 
+ALTER TABLE users ADD COLUMN IF NOT EXISTS email TEXT UNIQUE;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS contact_number TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS address TEXT;
 
 -- Guest categories (SRS 1.3: kid, adult, or senior/PWD).
 -- Optional: an entrance rate or a guest count with no category applies to every guest.

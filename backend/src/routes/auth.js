@@ -43,4 +43,49 @@ router.post(
 // GET /api/auth/me
 router.get('/me', authenticate, (req, res) => res.json({ user: publicUser(req.user) }));
 
+const registerLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  skip: () => config.env === 'test',
+  message: { error: 'Too many sign-ups. Try again later.' },
+});
+
+const registerSchema = z.object({
+  full_name: z.string().trim().min(1, 'required').max(100),
+  email: z.string().trim().toLowerCase().email('invalid email').max(50),
+  contact_number: z.string().trim().min(7, 'invalid number').max(20),
+  address: z.string().trim().max(200).optional().default(''),
+  password: z.string().min(8, 'must be at least 8 characters').max(100),
+});
+
+// POST /api/auth/register  (guest self-signup)
+router.post(
+  '/register',
+  registerLimiter,
+  validate(registerSchema),
+  asyncHandler(async (req, res) => {
+    const { full_name, email, contact_number, address, password } = req.body;
+
+    const existing = await query(
+      'SELECT 1 FROM users WHERE email = $1 OR username = $1',
+      [email]
+    );
+    if (existing.rows.length) {
+      return res.status(409).json({ error: 'An account with this email already exists' });
+    }
+
+    const password_hash = await bcrypt.hash(password, 10);
+    const { rows } = await query(
+      `INSERT INTO users (username, full_name, email, contact_number, address, role, active, password_hash)
+       VALUES ($1, $2, $1, $3, $4, 'guest', true, $5)
+       RETURNING *`,
+      [email, full_name, contact_number, address, password_hash]
+    );
+    const user = rows[0];
+    res.status(201).json({ token: signToken(user), user: publicUser(user) });
+  })
+);
+
 module.exports = router;
