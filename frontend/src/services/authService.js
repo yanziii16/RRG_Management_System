@@ -11,7 +11,14 @@ const authService = {
     return data;
   },
   async register(payload) {
-    const { data } = await api.post("/auth/register", payload);
+    const body = {
+      full_name: (payload.full_name ?? payload.fullName ?? payload.name ?? "").trim(),
+      email: (payload.email ?? "").trim(),
+      contact_number: (payload.contact_number ?? payload.contactNumber ?? payload.phone ?? "").trim(),
+      address: (payload.address ?? "").trim(),
+      password: payload.password ?? ""
+    };
+    const { data } = await api.post("/auth/register", body);
     localStorage.setItem(TOKEN_STORAGE_KEY, data.token);
     localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(data.user));
     return data;
