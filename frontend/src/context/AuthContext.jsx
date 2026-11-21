@@ -41,7 +41,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const register = async (payload) => {
-    try {
+    try {  
       const res = await authService.register(payload);
       setUser(res.user);
       return res.user;
