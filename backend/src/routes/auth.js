@@ -19,12 +19,27 @@ const loginLimiter = rateLimit({
   message: { error: 'Too many login attempts. Try again in 15 minutes.' },
 });
 
-const loginSchema = z.object({
-  username: text(50),
-  password: z.string({ required_error: 'required', invalid_type_error: 'must be text' }).min(1, 'required'),
-});
+const loginSchema = z
+  .object({
+    username: text(50).optional(),
+    email: z.string().trim().toLowerCase().email('invalid email').max(50).optional(),
+    password: z
+      .string({ required_error: 'required', invalid_type_error: 'must be text' })
+      .min(1, 'required'),
+  })
+  .refine((data) => Boolean(data.username || data.email), {
+    message: 'required',
+    path: ['username'],
+  });
 
-const publicUser = ({ id, username, full_name, role, active }) => ({ id, username, full_name, role, active });
+const publicUser = ({ id, username, email, full_name, role, active }) => ({
+  id,
+  username,
+  email,
+  full_name,
+  role,
+  active,
+});
 
 // POST /api/auth/login  (FR-01)
 router.post(
@@ -32,7 +47,11 @@ router.post(
   loginLimiter,
   validate(loginSchema),
   asyncHandler(async (req, res) => {
-    const { rows } = await query('SELECT * FROM users WHERE username = $1', [req.body.username]);
+    const identifier = (req.body.email || req.body.username || '').trim().toLowerCase();
+    const { rows } = await query(
+      'SELECT * FROM users WHERE LOWER(email) = $1 OR LOWER(username) = $1',
+      [identifier]
+    );
     const user = rows[0];
     const ok = user && user.active && (await bcrypt.compare(req.body.password, user.password_hash));
     if (!ok) throw unauthorized('Wrong username or password');
