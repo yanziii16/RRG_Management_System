@@ -58,8 +58,7 @@
         "Fresh bath towels"
       ],
       "images": [
-        "/src/assets/images/room_family_suite_1794982136996.jpg",
-        "/src/assets/images/resort_hero_pool_1794982137442.jpg"
+        "/uploads/rooms/c95364e8-e559-45a6-9d29-523efa47_1795249713919_401e42.jpg"
       ],
       "isAvailable": true,
       "status": "Available",
@@ -87,8 +86,8 @@
         "Pool access"
       ],
       "images": [
-        "/src/assets/images/room_family_suite_1794982136996.jpg",
-        "/src/assets/images/resort_golden_hour_1794982139412.jpg"
+        "/src/assets/images/room_family_suite.png",
+        "/src/assets/images/resort_hero_pool.jpg"
       ],
       "isAvailable": true,
       "status": "Available",
@@ -116,8 +115,6 @@
         "Grilling station access"
       ],
       "images": [
-        "/src/assets/images/cottage_regular_1794982137966.jpg",
-        "/src/assets/images/resort_hero_pool_1794982137442.jpg",
         "/uploads/cottages/photo_6334631820628006383_y_1795072885436_c91d0e.jpg"
       ],
       "isAvailable": true,
@@ -146,8 +143,8 @@
         "Poolside priority location"
       ],
       "images": [
-        "/src/assets/images/resort_golden_hour_1794982139412.jpg",
-        "/src/assets/images/cottage_regular_1794982137966.jpg"
+        "/src/assets/images/pool.jpg",
+        "/src/assets/images/umbrella.png"
       ],
       "isAvailable": true,
       "status": "Available",
@@ -174,8 +171,7 @@
         "Poolside towel rack"
       ],
       "images": [
-        "/src/assets/images/umbrella_poolside_1794982138079.jpg",
-        "/src/assets/images/resort_hero_pool_1794982137442.jpg"
+        "/uploads/cottages/80e9d714-c727-4db0-bdba-0b85ec53_1795249955318_90d9e5.jpg"
       ],
       "isAvailable": true,
       "status": "Available",
@@ -192,7 +188,7 @@
       "capacity": 14,
       "rateNote": "₱350 / hour for resort guests",
       "images": [
-        "/src/assets/images/facility_karaoke_lounge_1794982139760.jpg"
+        "/src/assets/images/pool_side_karaoke.jpg"
       ],
       "isAvailable": true
     },
@@ -205,7 +201,7 @@
       "capacity": 40,
       "rateNote": "Open to all checked-in and day-use guests",
       "images": [
-        "/src/assets/images/resort_golden_hour_1794982139412.jpg"
+        "/src/assets/images/pool.jpg"
       ],
       "isAvailable": true
     },
