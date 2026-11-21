@@ -123,6 +123,7 @@ CREATE TABLE IF NOT EXISTS payments (
 CREATE INDEX IF NOT EXISTS idx_payments_reservation ON payments (reservation_id);
 CREATE INDEX IF NOT EXISTS idx_payments_paid_at ON payments (paid_at);
 
+ALTER TABLE users ADD COLUMN IF NOT EXISTS username TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS email TEXT UNIQUE;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS contact_number TEXT;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS address TEXT;
