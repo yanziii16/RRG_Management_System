@@ -1,4 +1,4 @@
-import { api, TOKEN_STORAGE_KEY, USER_STORAGE_KEY } from "./api";
+import { api, TOKEN_STORAGE_KEY, USER_STORAGE_KEY } from "../api";
 
 const authService = {
   async login(email, password, expectedRole) {
