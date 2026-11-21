@@ -21,7 +21,7 @@ const loginLimiter = rateLimit({
 
 const loginSchema = z
   .object({
-    username: text(50).optional(),
+    username: z.string().trim().max(50).optional(),
     email: z.string().trim().toLowerCase().email('invalid email').max(50).optional(),
     password: z
       .string({ required_error: 'required', invalid_type_error: 'must be text' })
