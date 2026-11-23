@@ -6,8 +6,8 @@ types.setTypeParser(1700, (value) => parseFloat(value)); // NUMERIC -> number
 types.setTypeParser(20, (value) => parseInt(value, 10)); // BIGINT (COUNT, SUM of ints) -> number
 
 const pool = new Pool({
-  connectionString: config.databaseUrl,
   ssl: config.env === 'production' ? { rejectUnauthorized: false } : undefined,
+  connectionString: config.databaseUrl,
   max: 10,
   // A sleeping free-tier database (Neon) can take a while to wake up
   connectionTimeoutMillis: 30000,
