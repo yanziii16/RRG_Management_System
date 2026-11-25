@@ -58,8 +58,8 @@
         "Fresh bath towels"
       ],
       "images": [
-        "/src/assets/images/room_family_suite_1794982136996.jpg",
-        "/src/assets/images/resort_hero_pool_1794982137442.jpg"
+        "/src/assets/images/room_family.jpg",
+        "/src/assets/images/resort_hero_pool.jpg"
       ],
       "isAvailable": true,
       "status": "Available",
