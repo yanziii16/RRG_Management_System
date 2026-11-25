@@ -10,7 +10,25 @@ const app = express();
 app.set('trust proxy', 1); // Render sits behind a proxy
 app.use(helmet());
 // CORS allows only the real frontend address (CLIENT_URL), never "*"
-app.use(cors({ origin: config.clientUrl, exposedHeaders: ['X-Refresh-Token'] }));
+// Allowed frontends: comma-separated list in config.clientUrl, plus this project's Vercel preview URLs
+const allowedOrigins = String(config.clientUrl || '')
+  .split(',')
+  .map((s) => s.trim().replace(/\/$/, ''))
+  .filter(Boolean);
+const vercelPreview = /^https:\/\/rrg-management-system-[a-z0-9]+-yanaa1605\.vercel\.app$/;
+
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin) return callback(null, true); // curl, health checks
+      if (allowedOrigins.includes(origin) || vercelPreview.test(origin)) {
+        return callback(null, true);
+      }
+      return callback(null, false); // browser blocks it, server doesn't crash
+    },
+    exposedHeaders: ['X-Refresh-Token'],
+  })
+);
 app.use(express.json({ limit: '100kb' }));
 
 // Required by Activity 15: exactly {"status":"ok"}, no database
